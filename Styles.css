@@ -1,0 +1,635 @@
+/* custom css*/
+
+body {
+    background-color: antiquewhite;
+    min-height: 100vh;
+}
+
+h1 {
+    font-family: 'Notable', sans-serif;    
+}
+
+h2 {
+    font-family: 'open sans', sans-serif;
+    text-align: left;
+    animation-duration: 8s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .4) inset;
+    background: linlear gradient(to bottom, )
+}
+
+@keyframes Slidein {
+    0% {
+        margin-left: 0%;
+    }
+    50% {
+        margin-left: 150px;
+    }
+    100% {
+        margin-left: 0%;
+    }
+
+}
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+h3 {
+    font-size: 12px;
+}
+
+p {
+    font-family: 'open sans', sans-serif;
+    overflow: hidden;
+}
+
+ul {
+    overflow: hidden;
+}
+
+.jumbotron {
+    margin: auto;
+    background-color: beige;
+}
+
+.row {
+    padding: 15px;
+    height: 300px;
+    width: 100%
+}
+
+.headerimage {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+}
+
+.caption {
+    text-align: right;
+    }
+
+.classes1 {
+    display: block;
+    margin: auto;
+    height: 100%;
+}
+
+
+
+
+.calendar ol::after {
+content: ".";
+height: 0;
+clear:both;
+visibility: hidden;
+}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children's Theater Weekly Calendar</title>
+    <style>
+        body {
+            background-color: beige;
+            font-family: Arial, sans-serif;
+        }
+
+        .calendar {
+            width: 80%;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .time {
+            background-color: #D3D3D3; /* Light Gray color for time column */
+        }
+
+        .rehearsal {
+            background-color: #FFD700; /* Gold color for rehearsal */
+        }
+
+        .performance {
+            background-color: #FF6347; /* Tomato color for performance */
+        }
+
+        .workshop {
+            background-color: #87CEEB; /* Sky Blue color for workshop */
+        }
+
+        /* Add more classes and colors as needed */
+    </style>
+</head>
+
+
+.calhead > li {
+border-top: 2px solid #79A637;
+border-right: 2px solid #79A637;
+border-left: 2px solid #79A637;
+border-top-left-radius: 8px;
+border-top-right-radius: 8px;
+}
+.calblock > li > ul {
+padding: 1rem;
+}
+.calblock > li > ul li {
+border-radius: 8px;
+margin-bottom: 1rem;
+}
+.calblock > li > ul li:hover {
+animation-name: stretch;
+animation-duration: 1.5s;
+animation-timing-function: ease-out;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
+}
+@keyframes stretch {
+0% {
+transform: scale(1);
+}
+100% {
+transform: scale(1.2)
+}
+}
+.cal2 {
+height: 6rem;
+}
+.cal3 {
+height: 9rem;
+}
+.cal4 {
+height: 12rem;
+}
+.mt {
+background-color: #CEE4EE;
+border: 2px solid #83CAEB;
+}
+.act {
+background-color: #F5E7F4;
+border: 2px solid #E98FE3;
+}
+.vp {
+background-color: #FFFFD5;
+border: 2px solid #D6D612;
+}
+.calblock h3 {
+font-size: 1rem;
+font-weight: 700;
+text-transform: none;
+}
+.calblock p {
+font-size: .8rem;
+}
+.schedule ul {
+list-style-type: none;
+padding: 0;
+}
+.scheduleheader {
+display: none;
+visibility: hidden;
+}
+.schedule ul li ul li {
+padding: .4rem 3rem;
+text-align: center;
+}
+.schedule ul li ul li:nth-of-type(1) {
+background-color: #A0D94A;
+border: 1px solid #467326;
+padding: 1rem;
+font-weight: 900;
+text-transform: uppercase;
+}
+/* Content modifications for Mobile */
+.schedule ul li ul li:nth-of-type(2) span::before {content: "at ";}
+.schedule ul li ul li:nth-of-type(3)::before {content: "Starting: ";}
+.schedule ul li ul li:nth-of-type(3) span::before {content: ", ";}
+.schedule ul li ul li:nth-of-type(4)::before{content: "Show Dates: ";}
+.schedule ul li ul li:nth-of-type(4) span::before {content: " at ";}
+.schedule ul li ul li:nth-of-type(5)::before {content: "Teachers: ";}
+@media (min-width: 992px) {
+.calendar {
+border-radius: 32px;
+background-color: #E8FBCA;
+}
+.calhead > li {
+border: none;
+width: 25%;
+}
+.calblock > li:not(:last-child) {
+border-right: 1px dotted #000;
+}
+.scheduleheader {
+display:flex;
+visibility: visible;
+}
+.schedule > ul {
+border: 3px solid #467326;
+border-radius: 32px;
+}
+.schedule ul li ul {
+width: 100%;
+text-align: center;
+display: flex;
+justify-content: flex-end;
+}
+.schedule ul li ul li {
+padding: 1rem;
+width: 9rem;
+}
+.schedule ul li ul li:nth-of-type(1) {
+width: 18rem;
+text-align: left;
+background: none;
+border: none;
+}
+.schedule > ul > li:nth-of-type(even) {
+background-color: rgba(178,242,82,0.3)
+}
+.schedule ul li ul li:nth-last-of-type(1) {
+width: 12rem;
+}
+.schedule ul li ul li span {
+display: block;
+}
+.schedule ul li ul li:nth-of-type(2) span::before {content: "";}
+.schedule ul li ul li:nth-of-type(3)::before {content: "";}
+.schedule ul li ul li:nth-of-type(3) span::before {content: "";}
+.schedule ul li ul li:nth-of-type(4)::before{content: "";}
+.schedule ul li ul li:nth-of-type(4) span::before {content: "";}
+.schedule ul li ul li:nth-of-type(5)::before {content: "";}
+}
+.waitlist {
+text-transform: uppercase;
+color: #A0D94A;
+padding: .5rem 2rem;
+background-color: #79A637;
+border: 1px solid #467326;
+border-radius: 8px;
+}
+.register {
+text-transform: uppercase;
+color: #467326;
+padding: .5rem 2rem;
+background-color: #B2F252;
+border: 1px solid #A0D94A;
+border-radius: 8px;
+}
+
+/* CSS styles for the calendar */
+/* You can customize this to fit your theater's theme */
+
+/* Styles for header, days of the week, dates, etc. */
+
+
+
+body {
+  background:#ebebeb;
+  text-align:center;
+  font-family: Helvetica,Arial,sans-serif;
+}
+h1 {
+  font-size:32px;
+  font-weight:100;
+  margin-bottom:16px;
+  margin:20px 0 40px;
+}
+h2 {
+  font-size:14px;
+  font-weight:100;
+  margin-bottom:8px;
+  margin-top:5px;
+}
+h3 { font-size:21px; }
+.container { 
+  max-width:900px;
+  margin:0 auto;
+  text-align:left;
+  padding:0 20px;
+}
+.row { clear:both; }
+.row:after {
+  conttent:' ';
+  display:block;
+  clear:both;
+}
+.col-2 aside {
+  width:20%;
+  float:left;
+}
+.col-2 article {
+  width:80%;
+  float:left;
+}
+
+.eventKey div {
+  display:inline-block;
+  padding:4px;
+  margin:4px 4px 4px 0;
+  float:left;
+  clear:both;
+}
+.monthYear { margin:0px 0 10px 0; padding:0 0 0 8px;}
+.monthYear span { display:none; }
+.days li {
+  color:#333;
+  border-bottom:1px solid #ccc;
+  padding:4px 4px 4px 8px;
+  text-transform:uppercase;
+  font-size:13px;
+}
+.days li, .dates li {
+  float:left;
+  width:14.28%;
+  position:relative;
+  box-sizing:border-box;
+}
+.dates {
+  border-right:1px solid #ccc;
+}
+.dates:after, .days:after {
+  content:'';
+  display:block;
+  clear:both;
+}
+.dates li {
+  border:1px solid #ccc;
+  border-width:0 0 1px 1px;
+  height:90px;
+  margin:0;
+  background:#fff;
+}
+.dateWrapper {
+  max-height:90px;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  transition: max-height 1s;
+}
+.dateWrapper.open {
+  max-height:600px;
+  z-index:10;
+  padding-bottom:25px;
+  background:#fff;
+  border-bottom:1px solid #ccc;
+  box-shadow:0 0 10px #333;
+}
+.dates li.fade {
+  color:#ccc;
+  opacity:0.6;
+}
+.date, .dates li a {
+  display:block;
+  padding:4px;
+  text-align:right;
+  font-size:13px;
+}
+.dates li a, .eventKey div {
+  text-align:left;
+  text-decoration:none;
+  font-size: 12px;
+  color:#fff;
+  border-radius:2px;
+}
+.dates li a, .dates li div {
+  margin:4px 2px 0;
+}
+.dates li a.expand {
+  display:block;
+  background:linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 26%,rgba(0,0,0,0.50) 100%);
+  position:absolute;
+  bottom:0px;
+  left:0;
+  width:100%;
+  text-align:left;
+  padding:4px 0 0 0;
+  margin:0;
+  border-radius:0;
+}
+.dates li a.expand.open {
+  
+}
+.dates li a.expand span {
+  display:inline-block;
+  float:right;
+  padding:4px 8px;
+  transition: transform 1s ease-in-out;
+  
+}
+.dates li a.expand.open span {
+	transform: rotate(45deg);
+  color:#333;
+}
+
+.dates li a b {
+  font-weight:bold;
+}
+.multidayHolder {
+  position:relative;
+  height:20px;
+  padding:0;
+  margin:4px 0 0 0;
+}
+.dates li a.multidayEvent {
+  position: absolute; 
+  top:0;
+  left:0;
+  z-index:100;
+  display:none;
+  margin:0;
+}
+.multidayEvent span, .holiday span  { display:none;}
+.dates li a.length-2 {width:196%; display:block; }
+.dates li a.length-3 {width:301%; display:block;}
+.tradeShow, .tradeShow:before { background:#e86542; color:#fff;}
+.meeting, .meeting:before { background:#0359a6; color:#fff;}
+.holiday, .holiday:before { background:#5fa8aa; color:#fff;}
+.birthday, .birthday:before { background:#f8a805; color:#fff;}
+.calendarNav {
+  display:none;
+}
+@media (max-width: 744px) { 
+  body {
+    background:#fff;
+  }
+	.col-2 aside, .col-2 article {
+    width:100%;
+    float:none;
+    clear:both;
+  }
+	.eventKey div {
+    clear:none;
+  }
+  .monthYear { 
+    padding:20px 0 20px 23px; 
+    margin:0;
+    border-bottom:1px solid #ccc;
+  }
+	.monthYear span { display:inline; }
+	.days, .dates li, .dates li a.expand { display:none; }
+  .dates li.current, .dates li a.multidayEvent, .calendarNav {
+   display:block;
+   position:static;
+   width:auto;
+  }
+  .multidayHolder {
+    height:auto;
+  }
+  .dates {border:none;}
+  .dates li.current {
+    width:100%;
+    height:auto;
+    border:none;
+    position: relative;
+    display:block;
+  }
+  .dateWrapper { width:100%; height:auto; position:static; max-height:1000px;}
+  .date {
+    text-align:left;
+    position:absolute;
+    top:-46px;
+    left:0px;
+    font-size:21px;
+  }
+  .multidayEvent span, .holiday span  {
+    position:static;
+    margin-top:4px;
+    color:#999;
+   display:block;
+   text-align:left;
+  }
+  .dates li a {
+    background:none;
+    color:#333;
+    position:relative;
+    font-size:14px;
+    padding:25px 0 25px 35px;
+    margin:5px 0;
+    border-bottom:1px solid #ccc;
+    min-height:45px;
+  }
+  .dates li a:before {
+    content: '';
+    display: block;
+    width: 17px;
+    height: 17px;
+    border-radius: 17px;
+    position: absolute;
+    top: 30%;
+    left: 0;
+  }
+  .dates li a:after  {
+    content: '';
+    display:block;
+    position: absolute;
+    top:42%;
+    right:20px;
+    border:1px solid #ccc;
+    border-width:1px 1px 0 0;
+    width:15px;
+    height:15px;
+    transform: rotate(45deg);
+  }
+  .dates li a b { display:block; margin-bottom:4px; }
+  .calendarNav {
+    padding:20px 0;
+    text-align:center;
+  }
+  .calendarNav a {
+  	clear:both;
+    display:inline-block;
+    color:#333;
+    text-decoration:none;
+    padding:6px 10px;
+    border-radius:4px;
+    background:#d6d6d6;
+    border:1px solid #999;
+    border-width:0 1px 1px 0;
+    margin-right:6px;
+    font-size:14px;
+  }
+  
+}
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signup-container {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.signup-form label,
+.signup-form input,
+.signup-form select {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.signup-form input,
+.signup-form select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.signup-form input[type="submit"] {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.signup-form input[type="submit"]:hover {
+  background-color: #555;
+}
